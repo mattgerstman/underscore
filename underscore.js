@@ -1146,6 +1146,11 @@
     return obj === void 0;
   };
 
+  // Is a given value a string representation of a falsey variable?
+  _.isFalseyString = function(obj) {
+    return obj === '' || obj === '0' || obj === 'false' || obj === 'NaN' || obj === 'undefined' || obj == 'null';
+  };
+
   // Shortcut function for checking if an object has a given property directly
   // on itself (in other words, not on a prototype).
   _.has = function(obj, key) {
